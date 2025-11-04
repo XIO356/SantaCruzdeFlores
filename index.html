@@ -25,17 +25,20 @@
     ================================= */
     .hero {
       height: 100vh;
-      background: url(https://portal.andina.pe/EDPfotografia2/Thumbnail/2008/02/22/000054923W.jpg) no-repeat center center/cover;
+      width: 100vw; /* ocupa todo el ancho */
+      background: url(https://portal.andina.pe/EDPfotografia2/Thumbnail/2008/02/22/000054923W.jpg) no-repeat center center;
+      background-size: cover; /* cubre todo el contenedor */
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
       align-items: center;
       position: relative;
+      overflow: hidden; /* evita scroll por la imagen */
     }
 
     .overlay {
       position: absolute;
-      margin-bottom: 60px;
+      bottom: 60px;
       width: 100%;
       background-color: rgba(245, 246, 234, 0.5);
       padding: 20px;
@@ -43,16 +46,16 @@
     }
 
     .overlay h1 {
-      font-size: 4em; /* un poco más pequeño que antes */
+      font-size: 4.5em; /* un poco más pequeño */
       color: #000;
       text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.8);
     }
 
     .escudo {
       position: absolute;
-      top: 50%;          /* parte desde el centro */
+      top: 50%;
       right: 40px;
-      transform: translateY(70%); /* baja un poco (como estaba) */
+      transform: translateY(70%);
       width: 150px;
       height: auto;
       filter: drop-shadow(0 0 12px rgb(251, 254, 23));
@@ -124,7 +127,7 @@
     ================================= */
     @media (max-width: 768px) {
       .overlay h1 {
-        font-size: 2em; /* un poco más pequeño en móvil */
+        font-size: 2.5em; /* más proporcional en móvil */
       }
 
       .escudo {
