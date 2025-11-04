@@ -50,9 +50,12 @@
 
     .escudo {
       position: absolute;
-      bottom: 95px;
-      right: 25px;
-      filter: drop-shadow(0 0 12px rgb(251, 254, 253));
+      top: 50%;          /* parte desde el centro */
+      right: 40px;
+      transform: translateY(70%); /* baja un poco (puedes ajustar el % según necesites) */
+      width: 150px;
+      height: auto;
+      filter: drop-shadow(0 0 12px rgb(251, 254, 23));
       transition: transform 0.3s ease;
     }
 
@@ -158,3 +161,4 @@
 
 </body>
 </html>
+
